@@ -1,3 +1,4 @@
+# create a file
 file { 'resource':
 path    => '/tmp/school',
 owner   => 'www-data',
