@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#This file contains script to connect to my remote server
 HOST="54.167.96.160"
 USERNAME="ubuntu"
 PASSWORD=$(<~/.ssh/school)
