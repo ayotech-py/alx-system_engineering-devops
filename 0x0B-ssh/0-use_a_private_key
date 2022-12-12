@@ -3,4 +3,4 @@
 HOST="54.167.96.160"
 USERNAME="ubuntu"
 PASSWORD=$(<~/.ssh/school)
-ssh -p ${PASSWORD} ssh -l ${USERNAME} ${HOST}
+ssh ${USERNAME}@${HOST}
