@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-
+#This scritp fixes a connection to port 80
 sudo apt install -y nginx
 sudo service nginx start
