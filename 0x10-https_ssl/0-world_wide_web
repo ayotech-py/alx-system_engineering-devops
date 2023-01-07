@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+#This script displays infor about a subdomain
+
+myfun () {
+	if [[ "$#" < 2 ]]
+	then
+		list="www lb-01 web-01 web-02"
+		for value in $list;
+		do
+			dig $value.$1 | grep -A1 'ANSWER SECTION:' > text.txt
+			awk -v arg="$value" 'END { print "The subdomain "arg" is a "$4" record and points to " $5 }' text.txt
+		done
+	else
+		dig $2.$1 | grep -A1 'ANSWER SECTION:' > text.txt
+		awk -v arg="$2" 'END { print "The subdomain "arg" is a "$4 " record and points to " $5 }' text.txt
+	fi
+}
+
+myfun $1 $2
